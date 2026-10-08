@@ -28,19 +28,20 @@ window.CONTENT = {
                 lang: "Switch to English",
                 close: "Fermer"
             },
+            brand: { role: "Ingénieure IA" },
             nav: {
-                about: "À propos",
+                about: "Profil",
                 projects: "Projets",
                 skills: "Compétences",
-                experience: "Expériences",
-                contact: "Contact"
+                experience: "Expériences professionnelles",
+                contact: "Me contacter"
             },
             hero: {
-                status: "Disponible dès maintenant",
                 kicker: "Ingénieure IA & Data · INSA Rennes",
-                title: "Portfolio de Jeanne Dubois",
-                lead: "Je conçois et développe des solutions d'IA de bout en bout, de la donnée brute à l'application en production. Machine learning, traitement du langage ou IA générative : l'approche dépend du problème, pas l'inverse.",
-                ctaProjects: "Voir mes projets",
+                title: "De la donnée brute à l'outil utilisé chaque jour.",
+                lead: "Je conçois et développe des solutions d'IA de bout en bout, jusqu'à leur mise en production. Machine learning, traitement du langage ou IA générative : l'approche dépend du problème, pas l'inverse.",
+                ctaProjects: "Parcourir les projets",
+                ctaAsk: "Interroger l'assistant",
                 facts: [
                     { label: "Je recherche", value: "un CDI · data scientist, ingénieure IA, développement IA & Data" },
                     { label: "Disponible", value: "immédiatement · Bretagne · permis B" }
@@ -54,15 +55,15 @@ window.CONTENT = {
                 }
             },
             about: {
-                title: "À propos",
+                title: "Profil",
                 paragraphs: [
                     "Ingénieure informatique diplômée de l'INSA Rennes, spécialisée en IA et Data. Chez Groupe API, j'ai conçu, développé et mis en production [un assistant IA](#projet/assistant-ia) utilisé au quotidien par plusieurs services : RH, commerce, automatisme, électricité, support du logiciel LINA. J'ai travaillé sur chaque partie, de la [recherche hybride](#projet/assistant-ia) à l'[infrastructure GPU](#projet/infra-llm) en passant par le [suivi des usages](#projet/monitoring), en lien étroit avec les équipes métier, les développeurs et l'équipe réseau.",
                     "Au fil de ma formation et de mes expériences, j'ai aussi travaillé sur la [recherche d'information](#projet/tfidf), la [reconnaissance d'écriture](#projet/correctexam), la [reconnaissance de gestes en temps réel](#projet/gestures), l'[analyse de formulaires scannés](#projet/traitement-images), un [langage dédié avec IA de jeu](#projet/boardrace), une [chaîne CI/CD sur Kubernetes](#projet/devops) et des [tableaux de bord décisionnels](#projet/digdash). Toujours avec la même idée : partir d'un besoin concret et aller jusqu'à une application déployée.",
                     "Aujourd'hui, je souhaite rejoindre une équipe pour concevoir des solutions d'IA qui servent réellement les métiers, avec la perspective d'y évoluer."
                 ],
-                timelineTitle: "Parcours",
+                timelineTitle: "Repères",
                 educationTitle: "Formation",
-                hobbiesTitle: "En dehors du code"
+                hobbiesTitle: "Quand je ne code pas"
             },
             experience: {
                 title: "Expériences professionnelles",
@@ -125,18 +126,18 @@ window.CONTENT = {
                 fallback: "L'aperçu n'est pas disponible sur cet appareil."
             },
             contact: {
-                title: "Contact",
+                title: "Me contacter",
                 heading: "Un poste, un projet ou une question ?",
                 intro: "Je cherche un CDI en IA ou en data. N'hésitez pas à m'écrire."
             },
             footer: {
-                made: "Site conçu et codé par mes soins en HTML, CSS et JavaScript, sans framework.",
+                made: "Fait par mes soins, en HTML, CSS et JavaScript, sans framework.",
                 top: "Haut de page"
             },
             chat: {
                 open: "Poser une question",
                 title: "Assistant du portfolio",
-                subtitle: "Il répond à partir du contenu de ce site, avec ses sources.",
+                subtitle: "Il répond à partir du contenu de ce site, avec ses sources. Les questions sont conservées de façon anonyme pour l'améliorer.",
                 welcome: "Bonjour ! Je peux répondre à vos questions sur le parcours, les compétences et les projets de Jeanne. Mes réponses s'appuient uniquement sur ce portfolio.",
                 placeholder: "Votre question…",
                 send: "Envoyer",
@@ -165,19 +166,20 @@ window.CONTENT = {
                 lang: "Passer en français",
                 close: "Close"
             },
+            brand: { role: "AI Engineer" },
             nav: {
-                about: "About",
+                about: "Profile",
                 projects: "Projects",
                 skills: "Skills",
                 experience: "Experience",
-                contact: "Contact"
+                contact: "Get in touch"
             },
             hero: {
-                status: "Available now",
                 kicker: "AI & Data Engineer · INSA Rennes",
-                title: "Jeanne Dubois · Portfolio",
-                lead: "I design and build AI solutions end to end, from raw data to an application in production. Machine learning, natural language processing or generative AI: the approach depends on the problem, not the other way round.",
-                ctaProjects: "See my projects",
+                title: "From raw data to a tool people use every day.",
+                lead: "I design and build AI solutions end to end, all the way to production. Machine learning, natural language processing or generative AI: the approach depends on the problem, not the other way round.",
+                ctaProjects: "Browse the projects",
+                ctaAsk: "Ask the assistant",
                 facts: [
                     { label: "Looking for", value: "a permanent role · data scientist, AI engineer, AI & Data developer" },
                     { label: "Available", value: "immediately · Brittany, France · driving licence" }
@@ -191,15 +193,15 @@ window.CONTENT = {
                 }
             },
             about: {
-                title: "About",
+                title: "Profile",
                 paragraphs: [
                     "Computer science engineer from INSA Rennes, specialised in AI and Data. At Groupe API, I designed, built and put into production [an AI assistant](#projet/assistant-ia) used daily by several departments: HR, sales, automation, electrical, LINA software support. I worked on every part of it, from [hybrid search](#projet/assistant-ia) to the [GPU infrastructure](#projet/infra-llm) and [usage monitoring](#projet/monitoring), in close contact with the business teams, the developers and the network team.",
                     "Through my studies and work, I have also tackled [information retrieval](#projet/tfidf), [handwriting recognition](#projet/correctexam), [real-time gesture recognition](#projet/gestures), [scanned form analysis](#projet/traitement-images), a [domain-specific language with game AI](#projet/boardrace), a [CI/CD pipeline on Kubernetes](#projet/devops) and [decision-making dashboards](#projet/digdash). Always with the same idea: start from a concrete need and go all the way to a deployed application.",
                     "Today, I want to join a team to build AI solutions that genuinely serve the business, with room to grow within it."
                 ],
-                timelineTitle: "Background",
+                timelineTitle: "At a glance",
                 educationTitle: "Education",
-                hobbiesTitle: "Outside of code"
+                hobbiesTitle: "When I'm not coding"
             },
             experience: {
                 title: "Work experience",
@@ -262,18 +264,18 @@ window.CONTENT = {
                 fallback: "The preview isn't available on this device."
             },
             contact: {
-                title: "Contact",
+                title: "Get in touch",
                 heading: "A role, a project or a question?",
                 intro: "I'm looking for a permanent role in AI or data. Feel free to get in touch."
             },
             footer: {
-                made: "Designed and coded by me in plain HTML, CSS and JavaScript, no framework.",
+                made: "Handmade in plain HTML, CSS and JavaScript, no framework.",
                 top: "Back to top"
             },
             chat: {
                 open: "Ask a question",
                 title: "Portfolio assistant",
-                subtitle: "It answers from the content of this site and shows its sources.",
+                subtitle: "It answers from the content of this site and shows its sources. Questions are kept anonymously to improve it.",
                 welcome: "Hello! I can answer questions about Jeanne's background, skills and projects. My answers are based only on this portfolio.",
                 placeholder: "Your question…",
                 send: "Send",
@@ -411,7 +413,7 @@ window.CONTENT = {
             types: ["genai", "search"],
             pro: true,
             cover: "rag",
-            image: "static/img/projets/assistant-ia/demo.gif",
+            image: "static/img/projets/assistant-ia/embauchez-moi.gif",
             fallback: "static/img/projets/assistant-ia/interface.png",
             link: "",
             logos: ["python", "fastapi", "pytorch", "huggingface", "mistral", "spacy", "scikitlearn", "javascript"],

@@ -659,6 +659,23 @@
     const heroAsk = $("#hero-ask");
     if (CFG.CHATBOT_API_URL) {
         heroAsk.hidden = false;
+        // Bouton principal : amène à la fenêtre de l'assistant et place le curseur dans la saisie
+        const askCta = $("#hero-ask-cta");
+        askCta.hidden = false;
+        askCta.addEventListener("click", (e) => {
+            e.preventDefault();
+            const input = $("#hero-ask-input");
+            heroAsk.scrollIntoView({ behavior: "smooth", block: "center" });
+            input.focus({ preventScroll: true });
+            heroAsk.classList.remove("is-called");
+            void heroAsk.offsetWidth;
+            heroAsk.classList.add("is-called");
+        });
+    } else {
+        // Sans assistant, le lien vers les projets redevient le bouton principal
+        $("#hero-projects-cta").classList.replace("btn-ghost", "btn-primary");
+    }
+    if (CFG.CHATBOT_API_URL) {
         const askChat = (q) => {
             q = q.trim();
             if (!q) return;
