@@ -56,12 +56,13 @@ window.CONTENT = {
             about: {
                 title: "À propos",
                 paragraphs: [
-                    "Ingénieure informatique diplômée de l'INSA Rennes, spécialisée en IA et Data. Chez Groupe API, j'ai conçu, développé et mis en production [un assistant IA](#projet/assistant-ia) utilisé au quotidien par plusieurs services : RH, commerce, automatisme, électricité, support du logiciel LINA. J'en ai porté toutes les briques, de la [recherche hybride](#projet/assistant-ia) à l'[infrastructure GPU](#projet/infra-llm) et au [suivi des usages](#projet/monitoring).",
+                    "Ingénieure informatique diplômée de l'INSA Rennes, spécialisée en IA et Data. Chez Groupe API, j'ai conçu, développé et mis en production [un assistant IA](#projet/assistant-ia) utilisé au quotidien par plusieurs services : RH, commerce, automatisme, électricité, support du logiciel LINA. J'ai travaillé sur chaque partie, de la [recherche hybride](#projet/assistant-ia) à l'[infrastructure GPU](#projet/infra-llm) en passant par le [suivi des usages](#projet/monitoring), en lien étroit avec les équipes métier, les développeurs et l'équipe réseau.",
                     "Au fil de ma formation et de mes expériences, j'ai aussi travaillé sur la [recherche d'information](#projet/tfidf), la [reconnaissance d'écriture](#projet/correctexam), la [reconnaissance de gestes en temps réel](#projet/gestures), l'[analyse de formulaires scannés](#projet/traitement-images), un [langage dédié avec IA de jeu](#projet/boardrace), une [chaîne CI/CD sur Kubernetes](#projet/devops) et des [tableaux de bord décisionnels](#projet/digdash). Toujours avec la même idée : partir d'un besoin concret et aller jusqu'à une application déployée.",
                     "Aujourd'hui, je souhaite rejoindre une équipe pour concevoir des solutions d'IA qui servent réellement les métiers, avec la perspective d'y évoluer."
                 ],
                 timelineTitle: "Parcours",
-                educationTitle: "Formation"
+                educationTitle: "Formation",
+                hobbiesTitle: "En dehors du code"
             },
             experience: {
                 title: "Expériences professionnelles",
@@ -71,10 +72,10 @@ window.CONTENT = {
             },
             projects: {
                 title: "Projets",
-                intro: "Chaque fiche détaille le contexte, ce que j'ai fait et surtout les choix techniques : pourquoi telle approche plutôt qu'une autre.",
+                intro: "Chaque fiche détaille le contexte, ce que j'ai fait et les choix techniques : pourquoi telle approche plutôt qu'une autre.",
                 methodTitle: "Ma démarche, d'un projet à l'autre",
                 method: [
-                    { title: "Cadrer", text: "le besoin métier et la mesure du succès" },
+                    { title: "Cadrer", text: "comprendre le besoin métier" },
                     { title: "Comprendre les données", text: "formats, qualité, biais" },
                     { title: "Choisir l'approche", text: "du plus simple au plus complexe" },
                     { title: "Évaluer", text: "métriques adaptées, analyse d'erreurs" },
@@ -192,12 +193,13 @@ window.CONTENT = {
             about: {
                 title: "About",
                 paragraphs: [
-                    "Computer science engineer from INSA Rennes, specialised in AI and Data. At Groupe API, I designed, built and put into production [an AI assistant](#projet/assistant-ia) used daily by several departments: HR, sales, automation, electrical, LINA software support. I owned every part of it, from [hybrid search](#projet/assistant-ia) to the [GPU infrastructure](#projet/infra-llm) and [usage monitoring](#projet/monitoring).",
+                    "Computer science engineer from INSA Rennes, specialised in AI and Data. At Groupe API, I designed, built and put into production [an AI assistant](#projet/assistant-ia) used daily by several departments: HR, sales, automation, electrical, LINA software support. I worked on every part of it, from [hybrid search](#projet/assistant-ia) to the [GPU infrastructure](#projet/infra-llm) and [usage monitoring](#projet/monitoring), in close contact with the business teams, the developers and the network team.",
                     "Through my studies and work, I have also tackled [information retrieval](#projet/tfidf), [handwriting recognition](#projet/correctexam), [real-time gesture recognition](#projet/gestures), [scanned form analysis](#projet/traitement-images), a [domain-specific language with game AI](#projet/boardrace), a [CI/CD pipeline on Kubernetes](#projet/devops) and [decision-making dashboards](#projet/digdash). Always with the same idea: start from a concrete need and go all the way to a deployed application.",
                     "Today, I want to join a team to build AI solutions that genuinely serve the business, with room to grow within it."
                 ],
                 timelineTitle: "Background",
-                educationTitle: "Education"
+                educationTitle: "Education",
+                hobbiesTitle: "Outside of code"
             },
             experience: {
                 title: "Work experience",
@@ -207,10 +209,10 @@ window.CONTENT = {
             },
             projects: {
                 title: "Projects",
-                intro: "Each case study covers the context, what I did and above all the technical choices: why one approach rather than another.",
+                intro: "Each case study covers the context, what I did and the technical choices: why one approach rather than another.",
                 methodTitle: "My approach, project after project",
                 method: [
-                    { title: "Frame", text: "the business need and how success is measured" },
+                    { title: "Frame", text: "understand the business need" },
                     { title: "Understand the data", text: "formats, quality, bias" },
                     { title: "Pick the approach", text: "from simplest to most complex" },
                     { title: "Evaluate", text: "suitable metrics, error analysis" },
@@ -409,7 +411,7 @@ window.CONTENT = {
             types: ["genai", "search"],
             pro: true,
             cover: "rag",
-            image: "static/img/projets/assistant-ia/demo.gif",
+            image: "static/img/projets/assistant-ia/embauchez-moi.gif",
             fallback: "static/img/projets/assistant-ia/interface.png",
             link: "",
             logos: ["python", "fastapi", "pytorch", "huggingface", "mistral", "spacy", "scikitlearn", "javascript"],
@@ -420,17 +422,18 @@ window.CONTENT = {
                 period: "Depuis juin 2025",
                 team: "Projet porté de bout en bout : gestion de projet, architecture, développement, déploiement",
                 summary: "Un assistant qui répond en langage naturel à partir de vingt ans de documentation interne, cite ses sources, et tourne sur un LLM hébergé en interne.",
-                context: "Toute la documentation interne du groupe vit dans une arborescence de dossiers : livrets d'accueil, guides de l'ERP, chartes, conditions générales de vente, guides techniques des outils métier. Plus de vingt ans d'historique, régulièrement mis à jour, sur des domaines très hétérogènes, des procédures RH à la programmation d'automates. En théorie, tout le monde y a accès. En pratique, il faut connaître l'arborescence, se souvenir du nom du fichier, ou demander à un collègue. Pour les nouveaux arrivants et les profils non informatiques, c'est une perte de temps quotidienne.",
+                context: "Toute la documentation interne du groupe vit dans une arborescence de dossiers : livrets d'accueil, guides de l'ERP GDP, chartes, conditions générales de vente, guides techniques des outils métier. Plus de vingt ans d'historique, régulièrement mis à jour, sur des domaines très hétérogènes, des procédures RH à la programmation d'automates. En théorie, tout le monde y a accès. En pratique, il faut connaître l'arborescence, se souvenir du nom du fichier, ou demander à un collègue. Pour les nouveaux arrivants et les profils non informatiques, c'est une perte de temps quotidienne.",
                 goal: "Rendre l'information disponible rapidement, avec une réponse sourcée, sans qu'aucune donnée ne quitte l'infrastructure de l'entreprise.",
-                role: "Gestion du projet et réalisation complète : recueil des besoins auprès des services, architecture, back-end, interface, déploiement en production, suivi des usages et évolutions. J'ai aussi rédigé la documentation technique et le guide utilisateur. Un travail transversal : avec les services utilisateurs, que j'ai accompagnés dans l'adoption de l'IA (notamment en animant des « Cafés IA »), mais aussi avec les développeurs et l'équipe réseau pour intégrer l'outil au système d'information.",
+                role: "Gestion du projet et réalisation complète, du recueil des besoins à la mise en production.",
                 steps: [
-                    "Sept espaces : un assistant généraliste (rédaction, reformulation de mails, analyse de documents et d'images) et six modules documentaires (vie d'entreprise et RH, ERP, commerce, automatisme, électricité, logiciel LINA).",
+                    "Sept espaces : un assistant généraliste (rédaction, reformulation de mails, analyse de documents et d'images) et six modules documentaires (vie d'entreprise et RH, ERP GDP, commerce, automatisme, électricité, logiciel LINA).",
                     "Deux modes de recherche : une recherche documentaire instantanée, sans LLM, et une recherche détaillée qui rédige une réponse sourcée.",
                     "Pipeline de la recherche détaillée : réécriture de la question si elle dépend de l'historique, recherche lexicale TF-IDF et recherche dense FAISS, fusion, découpage en passages, reranking par cross-encoder, génération par Mistral Small 24B, réponse streamée (Server-Sent Events) avec citations.",
                     "Une [chaîne d'ingestion automatisée](#projet/ingestion) et une [infrastructure LLM partagée](#projet/infra-llm), détaillées dans leurs propres fiches.",
                     "Des modules métier ajoutés au fil des demandes : [suivi de versions LINA](#projet/lina-versions), [génération d'analyses fonctionnelles](#projet/af-generator), [accès aux tableaux de bord DigDash](#projet/digdash).",
                     "Prompts système en fichiers Markdown rechargés à chaud et configuration des modules dynamique : ajouter un module ne demande aucune ligne de Python.",
-                    "Interface web sans framework (modules ES), aperçus PDF/PNG des sections citées, feedback sur chaque réponse, notifications de nouveaux documents."
+                    "Interface web sans framework (modules ES), aperçus PDF/PNG des sections citées, feedback sur chaque réponse, notifications de nouveaux documents.",
+                    "Travail transversal : recueil des besoins et accompagnement des services utilisateurs (notamment lors de « Cafés IA »), coordination avec les développeurs et l'équipe réseau pour intégrer l'outil au système d'information, documentation technique et guide utilisateur."
                 ],
                 decisions: [
                     { q: "Pourquoi une recherche hybride plutôt que des embeddings seuls ?", a: "Les embeddings captent le sens mais ratent souvent les termes exacts : références produit, sigles, noms de menus de l'ERP. TF-IDF (texte lemmatisé avec spaCy, unigrammes et bigrammes) fait l'inverse. Je lance les deux (10 et 12 candidats), je normalise chaque liste de scores en min-max pour les rendre comparables, puis je fusionne : une section trouvée par les deux moteurs voit son score multiplié par 1,5. Les 5 meilleures sections passent à l'étape suivante." },
@@ -458,17 +461,18 @@ window.CONTENT = {
                 period: "Since June 2025",
                 team: "Owned end to end: project management, architecture, development, deployment",
                 summary: "An assistant that answers in plain language from twenty years of internal documentation, cites its sources, and runs on an in-house LLM.",
-                context: "All of the group's internal documentation lives in a folder tree: onboarding booklets, guides for the ERP, internal charters, terms of sale, technical guides for business tools. More than twenty years of history, regularly updated, across very different fields, from HR procedures to PLC programming. In theory everyone can access it. In practice you have to know the folder tree, remember the file name, or ask a colleague. For newcomers and non-technical staff, that is time lost every day.",
+                context: "All of the group's internal documentation lives in a folder tree: onboarding booklets, guides for the GDP ERP, internal charters, terms of sale, technical guides for business tools. More than twenty years of history, regularly updated, across very different fields, from HR procedures to PLC programming. In theory everyone can access it. In practice you have to know the folder tree, remember the file name, or ask a colleague. For newcomers and non-technical staff, that is time lost every day.",
                 goal: "Make information available quickly, with a sourced answer, without any data leaving the company's infrastructure.",
-                role: "Project management and full delivery: gathering needs from departments, architecture, back end, interface, production deployment, usage monitoring and evolutions. I also wrote the technical documentation and the user guide. It was cross-functional work: with the business departments, whom I supported in adopting AI (notably by running \"AI Cafés\"), and with the developers and the network team to integrate the tool into the company's IT systems.",
+                role: "Project management and full delivery, from gathering needs to production.",
                 steps: [
-                    "Seven spaces: a general assistant (writing, email rewording, document and image analysis) and six document modules (company life and HR, ERP, sales, automation, electrical, LINA software).",
+                    "Seven spaces: a general assistant (writing, email rewording, document and image analysis) and six document modules (company life and HR, GDP ERP, sales, automation, electrical, LINA software).",
                     "Two search modes: instant document search without an LLM, and detailed search that writes a sourced answer.",
                     "Detailed search pipeline: question rewriting when it depends on history, lexical TF-IDF search and dense FAISS search, fusion, passage chunking, cross-encoder reranking, generation with Mistral Small 24B, streamed answer (Server-Sent Events) with citations.",
                     "An [automated ingestion pipeline](#projet/ingestion) and a [shared LLM infrastructure](#projet/infra-llm), each with its own case study.",
                     "Business modules added on request: [LINA release tracking](#projet/lina-versions), [functional specification generator](#projet/af-generator), [access to DigDash dashboards](#projet/digdash).",
                     "System prompts stored as Markdown files reloaded on the fly and dynamic module configuration: adding a module takes no Python code.",
-                    "Framework-free web interface (ES modules), PDF/PNG previews of cited sections, feedback on every answer, notifications for new documents."
+                    "Framework-free web interface (ES modules), PDF/PNG previews of cited sections, feedback on every answer, notifications for new documents.",
+                    "Cross-functional work: gathering needs from the business departments and supporting them (notably through \"AI Cafés\"), coordinating with the developers and the network team to integrate the tool into the company's IT systems, technical documentation and user guide."
                 ],
                 decisions: [
                     { q: "Why hybrid search rather than embeddings alone?", a: "Embeddings capture meaning but often miss exact terms: product references, acronyms, ERP menu names. TF-IDF (spaCy-lemmatised text, unigrams and bigrams) does the opposite. I run both (10 and 12 candidates), min-max normalise each score list so they are comparable, then merge: a section found by both engines gets its score multiplied by 1.5. The top 5 sections go to the next stage." },
@@ -514,14 +518,14 @@ window.CONTENT = {
                 steps: [
                     "API de production unifiée (FastAPI) qui charge le modèle une seule fois et l'expose en interne : génération, génération streamée, vision, statut.",
                     "Environnements de développement sur d'autres ports, qui appellent ce LLM à distance via un petit client HTTP : plus aucun chargement de modèle en dev.",
-                    "Sérialisation des générations avec un asyncio.Semaphore(1).",
+                    "File d'attente des générations (asyncio.Semaphore) : le GPU traite une génération à la fois, sans risque de saturer sa mémoire.",
                     "Modèle quantifié en 4 bits (bitsandbytes) ; cross-encoder placé sur GPU seulement s'il reste au moins 0,5 Go de VRAM libre, sinon sur CPU.",
                     "Chargement paresseux des modèles, déchargement du LLM après une période d'inactivité, caches invalidés par empreinte du corpus.",
                     "Déploiement en service Windows (NSSM), tâches planifiées, rechargement du corpus à chaud via une route d'administration."
                 ],
                 decisions: [
                     { q: "Pourquoi quantifier en 4 bits ?", a: "En 16 bits, 24 milliards de paramètres occupent environ 48 Go rien que pour les poids (24 × 10⁹ × 2 octets). En 4 bits, environ 12 Go : le modèle tient sur le GPU du serveur, avec une perte de qualité faible pour ce type de tâche." },
-                    { q: "Pourquoi un sémaphore plutôt que plusieurs workers ?", a: "Le goulot d'étranglement est la mémoire GPU, pas le CPU. Deux appels simultanés à model.generate() sur le même GPU doublent les activations en mémoire et peuvent faire planter le service. Une file d'attente ajoute au pire quelques secondes de latence en cas de collision : acceptable pour un outil interne, contrairement à un crash." },
+                    { q: "Comment servir plusieurs utilisateurs avec un seul GPU ?", a: "Les demandes de génération passent par une file d'attente : le GPU traite une réponse à la fois, à pleine vitesse. Lancer deux générations en parallèle sur le même GPU doublerait la mémoire occupée et risquerait de faire tomber le service pour tout le monde. Comme les réponses sont streamées et ne durent que quelques secondes, l'attente reste courte et rare, et les recherches documentaires, qui n'utilisent pas le LLM, ne passent pas par cette file. Pour monter en charge, la suite logique serait un serveur d'inférence capable de regrouper les requêtes (vLLM, par exemple) ou un second GPU." },
                     { q: "Pourquoi des caches par empreinte du corpus ?", a: "Lemmatiser tout le corpus et recalculer les embeddings prend du temps. Une empreinte (hash) des sections indique si le corpus a changé ; si ce n'est pas le cas, la matrice TF-IDF et l'index FAISS sont réutilisés et seule la question est traitée." },
                     { q: "Pourquoi décharger le modèle après inactivité ?", a: "Le GPU sert aussi à d'autres traitements. Libérer la mémoire quand l'assistant n'est pas utilisé (la nuit, par exemple) évite de la bloquer pour rien ; le rechargement au premier appel est un coût ponctuel et prévisible." }
                 ],
@@ -546,14 +550,14 @@ window.CONTENT = {
                 steps: [
                     "A unified production API (FastAPI) that loads the model once and exposes it internally: generation, streamed generation, vision, status.",
                     "Development environments on other ports calling this LLM remotely through a small HTTP client: no more model loading in dev.",
-                    "Generations serialised with an asyncio.Semaphore(1).",
+                    "A generation queue (asyncio.Semaphore): the GPU handles one generation at a time, with no risk of running out of memory.",
                     "4-bit quantised model (bitsandbytes); cross-encoder placed on GPU only if at least 0.5 GB of VRAM is free, otherwise on CPU.",
                     "Lazy model loading, LLM unloaded after a period of inactivity, caches invalidated by a corpus fingerprint.",
                     "Deployed as a Windows service (NSSM), scheduled tasks, hot corpus reload through an admin route."
                 ],
                 decisions: [
                     { q: "Why 4-bit quantisation?", a: "In 16-bit, 24 billion parameters take about 48 GB for the weights alone (24 × 10⁹ × 2 bytes). In 4-bit, about 12 GB: the model fits on the server's GPU, with little quality loss for this kind of task." },
-                    { q: "Why a semaphore rather than several workers?", a: "The bottleneck is GPU memory, not CPU. Two simultaneous model.generate() calls on the same GPU double the activations in memory and can crash the service. A queue adds at worst a few seconds of latency on collisions: acceptable for an internal tool, unlike a crash." },
+                    { q: "How do you serve several users with a single GPU?", a: "Generation requests go through a queue: the GPU handles one answer at a time, at full speed. Running two generations in parallel on the same GPU would double the memory in use and could bring the service down for everyone. Since answers are streamed and only take a few seconds, waits stay short and rare, and document searches, which do not use the LLM, skip the queue. To scale further, the natural next step would be an inference server that batches requests (vLLM, for instance) or a second GPU." },
                     { q: "Why caches keyed on a corpus fingerprint?", a: "Lemmatising the whole corpus and recomputing embeddings takes time. A fingerprint (hash) of the sections tells whether the corpus has changed; if not, the TF-IDF matrix and FAISS index are reused and only the question is processed." },
                     { q: "Why unload the model when idle?", a: "The GPU is also used for other work. Freeing memory when the assistant is not in use (at night, for instance) avoids blocking it for nothing; reloading on the first call is a one-off, predictable cost." }
                 ],
@@ -851,7 +855,7 @@ window.CONTENT = {
                 period: "Depuis 2026",
                 team: "Conception avec les équipes métier",
                 summary: "Conception de tableaux de bord métiers pour l'aide à la décision stratégique et managériale, accessibles aussi depuis l'assistant IA.",
-                context: "Les managers et plusieurs équipes, notamment commerciales, avaient besoin d'indicateurs fiables et à jour pour piloter leur activité.",
+                context: "Les managers et plusieurs équipes, notamment commerciales, avaient besoin de visualiser leurs données de façon fiable et à jour pour appuyer leurs décisions.",
                 goal: "Des indicateurs justes, compris par ceux qui les utilisent, et faciles à retrouver.",
                 role: "Recueil des besoins, choix des indicateurs, conception des tableaux de bord, intégration dans l'assistant.",
                 steps: [
@@ -878,7 +882,7 @@ window.CONTENT = {
                 period: "Since 2026",
                 team: "Designed with business teams",
                 summary: "Designing business dashboards to support strategic and managerial decisions, also reachable from the AI assistant.",
-                context: "Managers and several teams, sales in particular, needed reliable, up-to-date indicators to steer their activity.",
+                context: "Managers and several teams, sales in particular, needed reliable, up-to-date data visualisation to support their decisions.",
                 goal: "Accurate indicators, understood by the people who use them, and easy to find.",
                 role: "Needs gathering, choice of indicators, dashboard design, integration into the assistant.",
                 steps: [
@@ -907,7 +911,7 @@ window.CONTENT = {
             types: ["data", "ml"],
             pro: true,
             cover: "monitor",
-            image: "static/img/projets/monitoring/tableau-de-bord.png",
+            image: "",
             link: "",
             logos: ["python", "streamlit", "pandas", "scikitlearn", "huggingface"],
             stack: ["Python", "Streamlit", "pandas", "scikit-learn", "Sentence Transformers", "Excel"],
@@ -925,7 +929,7 @@ window.CONTENT = {
                     "Indicateurs par module et vue d'ensemble, avec variation par rapport à la période précédente de même durée.",
                     "Performances : temps de réponse, distribution, P95, requêtes sans résultat.",
                     "Regroupement automatique des questions par proximité sémantique pour identifier les sujets les plus demandés.",
-                    "Accès par rôle (chaque service ne voit que ses modules), pagination, export Excel."
+                    "Accès par rôle (chaque référent ne voit que ses modules), pagination, export Excel."
                 ],
                 decisions: [
                     { q: "Comment regrouper les questions sans connaître le nombre de sujets ?", a: "Les questions sont encodées avec un modèle d'embeddings multilingue, puis regroupées par clustering hiérarchique agglomératif (distance cosinus, liaison moyenne, seuil de distance 0,72). Contrairement aux k-means, il n'impose pas de fixer le nombre de groupes à l'avance. Les formules de politesse sont retirées avant l'encodage, et chaque groupe est nommé à partir de ses noms les plus fréquents." },
@@ -954,7 +958,7 @@ window.CONTENT = {
                     "Indicators per module and an overview, with the change versus the previous period of the same length.",
                     "Performance: response times, distribution, P95, queries without results.",
                     "Automatic grouping of questions by semantic similarity to identify the most requested topics.",
-                    "Role-based access (each department only sees its modules), pagination, Excel export."
+                    "Role-based access (each module owner only sees their modules), pagination, Excel export."
                 ],
                 decisions: [
                     { q: "How to group questions without knowing the number of topics?", a: "Questions are encoded with a multilingual embedding model, then grouped by agglomerative hierarchical clustering (cosine distance, average linkage, distance threshold 0.72). Unlike k-means, it does not require fixing the number of groups in advance. Polite phrases are stripped before encoding, and each group is named from its most frequent nouns." },
@@ -1216,7 +1220,7 @@ window.CONTENT = {
                 title: "Chaîne CI/CD, Kubernetes et supervision",
                 label: "INSA Rennes · DevOps",
                 period: "Sept. 2025 - janv. 2026",
-                team: "Projet à trois (avec Léo Breidenstein et Pınar Tür)",
+                team: "Projet en équipe",
                 summary: "Une chaîne DevOps complète autour d'un jeu du taquin (Spring Boot + Angular) : tests bloquants, images construites par Kaniko, déploiement Kubernetes et tableau de bord Grafana.",
                 context: "Nous partions d'une application écrite dans un autre cours : un jeu du taquin, avec une API REST Spring Boot (Java 21, base H2) et une interface Angular (historique annuler / refaire, motifs à assembler, meilleurs scores). Consigne : ne rien changer au fonctionnel et construire toute la chaîne autour.",
                 goal: "Qu'un commit passe seul par les tests, la construction, la publication des images et le déploiement, et que l'application déployée soit observable.",
@@ -1254,7 +1258,7 @@ window.CONTENT = {
                 title: "CI/CD pipeline, Kubernetes and monitoring",
                 label: "INSA Rennes · DevOps",
                 period: "Sep 2025 - Jan 2026",
-                team: "Team of three (with Léo Breidenstein and Pınar Tür)",
+                team: "Team project",
                 summary: "A complete DevOps chain around a sliding-puzzle game (Spring Boot + Angular): blocking tests, images built with Kaniko, Kubernetes deployment and a Grafana dashboard.",
                 context: "We started from an application written in another course: a sliding-puzzle game with a Spring Boot REST API (Java 21, H2 database) and an Angular interface (undo / redo history, patterns to assemble, high scores). The brief: change nothing functional and build the whole chain around it.",
                 goal: "Have a commit go through tests, build, image publishing and deployment on its own, with the deployed application observable.",
@@ -1303,7 +1307,7 @@ window.CONTENT = {
                 title: "Extraction et classement de dessins sur des formulaires scannés",
                 label: "INSA Rennes · traitement d'images",
                 period: "Sept. 2024 - janv. 2025",
-                team: "Projet à quatre",
+                team: "Projet en équipe",
                 summary: "Une chaîne OpenCV en C++ qui redresse des formulaires scannés, lit leur identifiant binaire, découpe chaque dessin fait à la main et le range selon le symbole de sa rangée.",
                 context: "Une base de scans de formulaires : sept rangées par feuille, chacune avec une icône imprimée (feu, police, inondation, personne… 14 types), parfois une taille demandée (small, medium, large), puis cinq cases où des personnes ont reproduit l'icône à la main. Des croix de calibrage et un code binaire identifient la feuille. Certains scans sont décalés, tournés ou incomplets.",
                 goal: "Extraire automatiquement chaque dessin, savoir quelle icône et quelle taille il représente, et l'enregistrer avec ses informations (formulaire, rangée, colonne).",
@@ -1338,7 +1342,7 @@ window.CONTENT = {
                 title: "Extracting and sorting drawings from scanned forms",
                 label: "INSA Rennes · image processing",
                 period: "Sep 2024 - Jan 2025",
-                team: "Team of four",
+                team: "Team project",
                 summary: "A C++ OpenCV pipeline that straightens scanned forms, reads their binary ID, cuts out each hand-drawn sketch and files it under the symbol of its row.",
                 context: "A set of scanned forms: seven rows per sheet, each with a printed icon (fire, police, flood, person… 14 types), sometimes a requested size (small, medium, large), then five boxes where people redrew the icon by hand. Calibration crosses and a binary code identify the sheet. Some scans are shifted, rotated or incomplete.",
                 goal: "Automatically extract each drawing, know which icon and size it represents, and save it with its metadata (form, row, column).",
@@ -1573,8 +1577,8 @@ window.CONTENT = {
         {
             name: { fr: "Méthodes", en: "Methods" },
             items: {
-                fr: ["gestion de projet", "recueil des besoins", "Agile / Scrum", "documentation", "vulgarisation (Cafés IA)"],
-                en: ["project management", "requirements gathering", "Agile / Scrum", "documentation", "explaining AI (AI Cafés)"]
+                fr: ["gestion de projet", "recueil des besoins", "travail transversal avec les équipes métier et techniques", "Agile / Scrum", "documentation", "vulgarisation (Cafés IA)"],
+                en: ["project management", "requirements gathering", "cross-functional work with business and technical teams", "Agile / Scrum", "documentation", "explaining AI (AI Cafés)"]
             }
         },
         {
@@ -1610,10 +1614,10 @@ window.CONTENT = {
         { fr: { name: "Allemand", level: "B2 (Goethe-Zertifikat)" }, en: { name: "German", level: "B2 (Goethe-Zertifikat)" } }
     ],
 
-    /*
-      Loisirs : la section « En dehors du code » ne s'affiche que si cette liste n'est pas vide.
-      Exemple :
-      { fr: { name: "Vidéo", text: "..." }, en: { name: "Video", text: "..." } }
-    */
-    hobbies: []
+    hobbies: [
+        {
+            fr: { name: "Enseignement / tutorat", text: "Accompagnement scolaire individuel en mathématiques, auprès d'élèves de collège et de lycée." },
+            en: { name: "Teaching / tutoring", text: "One-to-one maths tutoring for secondary school pupils (middle and high school)." }
+        }
+    ]
 };
