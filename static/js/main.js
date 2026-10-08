@@ -173,7 +173,7 @@
                 <path d="M178 54h70" class="c-accent-stroke"/>
                 ${[0,1,2,3].map(r => [0,1,2].map(c => `<rect x="${178 + c * 36}" y="${68 + r * 16}" width="32" height="12" rx="1"/>`).join("")).join("")}
             </g>
-            <g class="c-text"><text x="69" y="100">.lpb</text></g>`,
+            <g class="c-text"><text x="69" y="100">JSON</text></g>`,
         dash: `
             <g class="c-line">
                 <rect x="30" y="30" width="260" height="120" rx="6" class="c-fill"/>
