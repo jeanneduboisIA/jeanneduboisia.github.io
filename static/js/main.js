@@ -44,6 +44,17 @@
         ? `<img class="logo" src="static/img/logos/${esc(name)}.svg" alt="${esc(alt)}" width="18" height="18">`
         : "";
 
+    // Mesure d'audience (GoatCounter, sans cookies) : compte un événement
+    // si le script est chargé, ne fait rien sinon (bloqueur de pub, test en local...).
+    const track = (path, title = "") => {
+        try {
+            if (window.goatcounter && typeof window.goatcounter.count === "function") {
+                window.goatcounter.count({ path, title: title || path, event: true });
+            }
+        } catch { /* la mesure ne doit jamais casser le site */ }
+    };
+    window.PortfolioTrack = track; // utilisé par chatbot.js
+
     const cvUrl = () => pick(CFG.cv) || "static/cv/CV_JeanneDubois_Ingenieure_IA.pdf";
 
     /* ---------- icônes (traits simples, 24×24) ---------- */
@@ -544,6 +555,7 @@
     function openDetail(id) {
         const p = C.projects.find((x) => x.id === id);
         if (!p) return;
+        if (currentProject?.id !== id) track(`projet/${id}`, `Fiche projet : ${p.fr.title}`);
         currentProject = p;
         renderDetail(p);
         if (!dialog.open) {
@@ -619,6 +631,7 @@
     const cvDialog = $("#cv-dialog");
 
     function openCv() {
+        track("cv/apercu", "CV : aperçu");
         const url = cvUrl();
         $("#cv-download").href = url;
         $("#cv-newtab").href = url;
@@ -635,6 +648,8 @@
         e.preventDefault();
         openCv();
     });
+    $("#cv-download").addEventListener("click", () => track("cv/telechargement", "CV : téléchargement"));
+    $("#cv-newtab").addEventListener("click", () => track("cv/onglet", "CV : ouvert dans un onglet"));
     $(".cv-close", cvDialog).addEventListener("click", () => cvDialog.close());
     cvDialog.addEventListener("click", (e) => { if (e.target === cvDialog) cvDialog.close(); });
     cvDialog.addEventListener("close", () => document.body.classList.remove("no-scroll"));

@@ -129,6 +129,7 @@
         question = question.trim();
         if (!question || busy) return;
         busy = true;
+        window.PortfolioTrack?.("chatbot/question", "Chatbot : question posée"); // nombre de questions, pas leur contenu
         addMessage("user", question);
         input.value = "";
         status.textContent = t("chat.searching");
