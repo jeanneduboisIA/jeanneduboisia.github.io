@@ -413,7 +413,7 @@ window.CONTENT = {
             types: ["genai", "search"],
             pro: true,
             cover: "rag",
-            image: "static/img/projets/assistant-ia/embauchez-moi.gif",
+            image: "static/img/projets/assistant-ia/demo.gif",
             fallback: "static/img/projets/assistant-ia/interface.png",
             link: "",
             logos: ["python", "fastapi", "pytorch", "huggingface", "mistral", "spacy", "scikitlearn", "javascript"],
