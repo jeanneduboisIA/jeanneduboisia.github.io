@@ -38,7 +38,7 @@ window.CONTENT = {
             },
             hero: {
                 kicker: "Ingénieure IA & Data · INSA Rennes",
-                title: "De la donnée brute à l'outil utilisé chaque jour.",
+                title: "Portfolio Jeanne Dubois",
                 lead: "Je conçois et développe des solutions d'IA de bout en bout, jusqu'à leur mise en production. Machine learning, traitement du langage ou IA générative : l'approche dépend du problème, pas l'inverse.",
                 ctaProjects: "Parcourir les projets",
                 ctaAsk: "Interroger l'assistant",
