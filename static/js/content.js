@@ -31,9 +31,9 @@ window.CONTENT = {
             brand: { role: "Ingénieure IA" },
             nav: {
                 about: "Profil",
-                projects: "Projets",
-                skills: "Compétences",
-                experience: "Expériences professionnelles",
+                projects: "Réalisations",
+                skills: "Savoir-faire",
+                experience: "Parcours",
                 contact: "Me contacter"
             },
             hero: {
@@ -66,13 +66,13 @@ window.CONTENT = {
                 hobbiesTitle: "Quand je ne code pas"
             },
             experience: {
-                title: "Expériences professionnelles",
+                title: "Parcours professionnel",
                 missions: "Missions",
                 impact: "Résultat",
                 cv: "Aperçu du CV"
             },
             projects: {
-                title: "Projets",
+                title: "Réalisations",
                 intro: "Chaque fiche détaille le contexte, ce que j'ai fait et les choix techniques : pourquoi telle approche plutôt qu'une autre.",
                 methodTitle: "Ma démarche, d'un projet à l'autre",
                 method: [
@@ -116,7 +116,7 @@ window.CONTENT = {
                 }
             },
             skills: {
-                title: "Compétences",
+                title: "Savoir-faire",
                 languages: "Langues"
             },
             cv: {
@@ -131,7 +131,7 @@ window.CONTENT = {
                 intro: "Je cherche un CDI en IA ou en data. N'hésitez pas à m'écrire."
             },
             footer: {
-                made: "Fait par mes soins, en HTML, CSS et JavaScript, sans framework.",
+                made: "Fait main, en HTML, CSS et JavaScript, sans framework.",
                 top: "Haut de page"
             },
             chat: {
@@ -169,9 +169,9 @@ window.CONTENT = {
             brand: { role: "AI Engineer" },
             nav: {
                 about: "Profile",
-                projects: "Projects",
-                skills: "Skills",
-                experience: "Experience",
+                projects: "Selected work",
+                skills: "Expertise",
+                experience: "Career",
                 contact: "Get in touch"
             },
             hero: {
@@ -204,13 +204,13 @@ window.CONTENT = {
                 hobbiesTitle: "When I'm not coding"
             },
             experience: {
-                title: "Work experience",
+                title: "Career",
                 missions: "What I did",
                 impact: "Outcome",
                 cv: "Preview my CV"
             },
             projects: {
-                title: "Projects",
+                title: "Selected work",
                 intro: "Each case study covers the context, what I did and the technical choices: why one approach rather than another.",
                 methodTitle: "My approach, project after project",
                 method: [
@@ -254,7 +254,7 @@ window.CONTENT = {
                 }
             },
             skills: {
-                title: "Skills",
+                title: "Expertise",
                 languages: "Languages"
             },
             cv: {
@@ -980,39 +980,47 @@ window.CONTENT = {
             id: "correctexam",
             featured: true,
             group: "school",
-            types: ["genai", "ml"],
+            types: ["genai", "ml", "search"],
             pro: false,
             cover: "exam",
             image: "static/img/projets/correct-exam/mlt-transcription.png",
             link: "",
-            logos: ["python", "opencv", "angular", "typescript", "java"],
-            stack: ["Python", "OpenCV", "Embeddings", "RAG", "Angular", "TypeScript", "Java"],
+            logos: ["python", "opencv", "onnx", "angular", "java", "quarkus", "tensorflow", "typescript", "elasticsearch"],
+            stack: ["Python", "OpenCV", "ONNX Runtime Web", "TensorFlow.js", "Angular", "TypeScript", "Java", "Quarkus", "Maven", "Fuse.js", "Embeddings", "RAG", "Elasticsearch", "jina-embeddings-v3", "PyMuPDF"],
             fr: {
                 title: "CorrectExam : l'IA pour aider à corriger des copies",
                 label: "INSA Rennes · plateforme INRIA / IRISA",
                 period: "Sept. 2024 - janv. 2025",
                 team: "Projet en équipe, méthode Agile",
-                summary: "Reconnaissance d'écriture manuscrite, regroupement des réponses similaires et génération de commentaires pédagogiques.",
-                context: "CorrectExam est une plateforme de correction de copies numérisées développée à l'INRIA / IRISA. Notre équipe devait y intégrer des fonctionnalités d'IA pour faire gagner du temps aux correcteurs.",
-                goal: "Transcrire les réponses manuscrites, regrouper les réponses qui se ressemblent pour les corriger par lots, et proposer des commentaires à partir du cours.",
-                role: "Étude des solutions existantes, développement (Python, Angular/TypeScript, Java), tests et adaptation aux contraintes de la plateforme.",
+                summary: "Transcription des réponses manuscrites directement dans le navigateur, regroupement des réponses similaires pour noter par lots, et génération de commentaires pédagogiques ancrés dans le cours (RAG).",
+                context: "CorrectExam est une plateforme open source de correction de copies numérisées, développée à l'INRIA / IRISA, avec une interface Angular et un serveur Java (Quarkus). Elle savait déjà lire les cases cochées et reconnaître le nom des étudiants, mais pas les réponses rédigées à la main. Notre équipe devait y ajouter de l'IA pour faire gagner du temps aux correcteurs sur ces questions.",
+                goal: "Transcrire automatiquement les réponses manuscrites, regrouper les réponses similaires pour leur appliquer la même note et les mêmes commentaires en une fois, et proposer des commentaires à partir du cours.",
+                role: "Développement en équipe sur les trois couches de la plateforme : traitement d'image en Python, interface et inférence en Angular / TypeScript, API et stockage en Java (Quarkus). Étude des modèles existants et tests sur de vraies copies.",
                 steps: [
-                    "Segmentation des lignes manuscrites, puis transcription avec des modèles de reconnaissance d'écriture.",
-                    "Calcul d'embeddings et regroupement des réponses similaires pour la correction par lots.",
-                    "Architecture RAG sur les supports de cours pour ancrer les commentaires générés.",
-                    "Génération de suggestions de notes et de commentaires pédagogiques."
+                    "Nouveau type de question « manuscrit » : pour ces questions, la transcription se lance automatiquement à l'affichage de la copie.",
+                    "Découpage de la réponse en lignes (Python, OpenCV) : binarisation d'Otsu, profil de projection horizontal, fusion des lignes trop proches, suppression des lignes vides. Le script est appelé par une route de l'API Java.",
+                    "Transcription ligne par ligne dans le navigateur : modèle de reconnaissance d'écriture au format ONNX, entraîné sur des écritures françaises (RIMES) et des données synthétiques, exécuté avec ONNX Runtime Web. Prétraitement avec TensorFlow.js (niveaux de gris, hauteur fixe, normalisation, marges) et décodage CTC écrit en TypeScript.",
+                    "Stockage des transcriptions dans une nouvelle entité côté serveur (Java, Panache, API REST) : chaque copie n'est transcrite qu'une fois.",
+                    "Regroupement des réponses similaires : calcul d'embeddings pour rapprocher les réponses proches sur le fond, et recherche floue (Fuse.js) sur les transcriptions pour tolérer les erreurs de lecture. Le correcteur sélectionne les réponses, filtre par mot-clé ou masque celles déjà notées, puis applique la même note et les mêmes commentaires en une fois.",
+                    "RAG sur les supports de cours : extraction du texte des PDF (PyMuPDF), découpage sémantique en passages de 300 à 500 caractères, embeddings jina-embeddings-v3, index vectoriel Elasticsearch interrogé en kNN.",
+                    "Génération de suggestions de notes et de commentaires pédagogiques à partir des passages du cours retrouvés."
                 ],
                 decisions: [
-                    { q: "Pourquoi segmenter les lignes avant de transcrire ?", a: "Les modèles de reconnaissance d'écriture travaillent sur des lignes de texte. Isoler chaque ligne de la copie numérisée (traitement d'image avec OpenCV) donne au modèle une entrée propre et améliore nettement la transcription." },
+                    { q: "Pourquoi découper la réponse en lignes avant de la transcrire ?", a: "Le modèle de reconnaissance lit une ligne de texte à la fois, alors qu'une réponse en fait souvent plusieurs. Pour isoler les lignes, le profil de projection horizontal (la quantité d'encre sur chaque rangée de pixels) suffit sur des réponses écrites dans un cadre : c'est simple, rapide et sans modèle supplémentaire. Les lignes très proches sont fusionnées pour ne pas couper une lettre en deux, et une marge est gardée autour de chaque ligne." },
+                    { q: "Pourquoi exécuter le modèle dans le navigateur ?", a: "CorrectExam fait déjà une grande partie de ses traitements d'image côté client. Faire tourner le modèle ONNX dans le navigateur, en WebAssembly, évite d'ajouter un serveur de calcul : le serveur Java se contente de découper les lignes et de stocker les résultats. La contrepartie : il faut un modèle assez léger pour tourner sur la machine du correcteur." },
                     { q: "Pourquoi regrouper les réponses avant de corriger ?", a: "Des réponses proches sur le fond reçoivent souvent la même note et le même commentaire. En représentant chaque réponse transcrite par un embedding et en regroupant les plus proches, le correcteur valide un groupe au lieu de corriger chaque copie séparément." },
-                    { q: "Pourquoi un RAG pour les commentaires ?", a: "Un commentaire pédagogique doit renvoyer au cours, pas aux connaissances générales d'un modèle. Le RAG ancre la génération dans les supports du cours." }
+                    { q: "Pourquoi une recherche floue en plus des embeddings ?", a: "Les transcriptions contiennent des erreurs : une seule lettre mal reconnue suffit à rendre différentes deux réponses identiques. La recherche floue tolère ces écarts. Elle est faite dans les deux sens, pour ne pas manquer une réponse courte contenue dans une plus longue. Le correcteur garde la main : il voit les réponses proposées et choisit celles auxquelles appliquer la note." },
+                    { q: "Pourquoi un RAG pour les commentaires ?", a: "Un commentaire pédagogique doit renvoyer au cours, pas aux connaissances générales d'un modèle. Les supports sont découpés, indexés dans Elasticsearch, et les passages les plus proches de la réponse sont fournis au modèle pour ancrer la génération." },
+                    { q: "Pourquoi enregistrer les transcriptions ?", a: "La transcription prend plusieurs secondes par copie. Enregistrée côté serveur, elle sert à la fois à l'affichage pendant la correction, au regroupement des réponses et à la génération de commentaires, sans relancer le modèle à chaque fois." }
                 ],
                 challenges: [
-                    "Des écritures manuscrites très variées.",
-                    "Des contraintes de calcul fortes côté client : choisir entre modèles performants mais lourds et solutions plus légères."
+                    "Des écritures très variées et des transcriptions imparfaites, d'où une recherche de similarité tolérante aux erreurs.",
+                    "Le calcul côté client : trouver un modèle fiable mais assez léger pour le navigateur du correcteur.",
+                    "S'intégrer dans une base de code existante et volumineuse (JHipster, Angular, Quarkus), à plusieurs et en sprints."
                 ],
-                results: "Une version fonctionnelle intégrée à la plateforme et testée en conditions réelles.",
+                results: "Une version fonctionnelle intégrée à la plateforme et testée en conditions réelles : les réponses manuscrites sont transcrites automatiquement, le correcteur note d'un coup un groupe de réponses similaires et dispose de suggestions de commentaires appuyées sur le cours.",
                 learnings: [
+                    "Choisir où exécuter un modèle, côté client ou côté serveur, en fonction de l'architecture existante.",
                     "Évaluer une solution dans son contexte d'usage, pas seulement sur un jeu de test.",
                     "Travailler à plusieurs sur une base de code existante, en sprints."
                 ]
@@ -1022,27 +1030,35 @@ window.CONTENT = {
                 label: "INSA Rennes · INRIA / IRISA platform",
                 period: "Sep 2024 - Jan 2025",
                 team: "Team project, Agile",
-                summary: "Handwriting recognition, grouping of similar answers and generation of teaching feedback.",
-                context: "CorrectExam is a platform for grading scanned exam papers, developed at INRIA / IRISA. Our team had to add AI features to save graders time.",
-                goal: "Transcribe handwritten answers, group similar answers so they can be graded in batches, and suggest comments based on the course material.",
-                role: "Reviewing existing solutions, development (Python, Angular/TypeScript, Java), testing and adapting to the platform's constraints.",
+                summary: "Handwritten answers transcribed right in the browser, similar answers grouped so they can be graded in batches, and teaching comments generated from the course material (RAG).",
+                context: "CorrectExam is an open-source platform for grading scanned exam papers, developed at INRIA / IRISA, with an Angular interface and a Java (Quarkus) server. It could already read ticked boxes and recognise students' names, but not handwritten answers. Our team had to add AI to save graders time on those questions.",
+                goal: "Automatically transcribe handwritten answers, group similar answers so they can get the same grade and comments in one go, and suggest comments based on the course material.",
+                role: "Team development across all three layers of the platform: image processing in Python, interface and inference in Angular / TypeScript, API and storage in Java (Quarkus). Reviewing existing models and testing on real exam papers.",
                 steps: [
-                    "Segmented handwritten lines, then transcribed them with handwriting recognition models.",
-                    "Computed embeddings and clustered similar answers for batch grading.",
-                    "Built a RAG architecture over the course material to ground the generated comments.",
-                    "Generated suggested grades and teaching comments."
+                    "A new \"handwritten\" question type: for these questions, transcription starts automatically when the paper is displayed.",
+                    "Splitting the answer into lines (Python, OpenCV): Otsu binarisation, horizontal projection profile, merging lines that are too close, dropping empty lines. The script is called from a route of the Java API.",
+                    "Line-by-line transcription in the browser: a handwriting recognition model in ONNX format, trained on French handwriting (RIMES) and synthetic data, run with ONNX Runtime Web. Preprocessing with TensorFlow.js (greyscale, fixed height, normalisation, padding) and CTC decoding written in TypeScript.",
+                    "Transcriptions stored in a new server-side entity (Java, Panache, REST API): each paper is transcribed only once.",
+                    "Grouping similar answers: embeddings to bring together answers that are close in substance, and fuzzy search (Fuse.js) over the transcriptions to tolerate reading errors. The grader selects the answers, filters by keyword or hides those already graded, then applies the same grade and comments in one go.",
+                    "RAG over the course material: text extraction from PDFs (PyMuPDF), semantic chunking into 300 to 500-character passages, jina-embeddings-v3 embeddings, Elasticsearch vector index queried with kNN.",
+                    "Generated suggested grades and teaching comments from the retrieved course passages."
                 ],
                 decisions: [
-                    { q: "Why segment lines before transcribing?", a: "Handwriting recognition models work on lines of text. Isolating each line of the scanned paper (image processing with OpenCV) gives the model a clean input and clearly improves transcription." },
+                    { q: "Why split the answer into lines before transcribing it?", a: "The recognition model reads one line of text at a time, while an answer often spans several. To isolate the lines, the horizontal projection profile (the amount of ink on each row of pixels) is enough for answers written inside a box: simple, fast, and no extra model. Lines that are very close are merged so a letter is not cut in half, and a margin is kept around each line." },
+                    { q: "Why run the model in the browser?", a: "CorrectExam already does much of its image processing on the client. Running the ONNX model in the browser, in WebAssembly, avoids adding a compute server: the Java server only splits lines and stores results. The trade-off: the model has to be light enough to run on the grader's machine." },
                     { q: "Why group answers before grading?", a: "Answers that are close in substance often get the same grade and comment. By representing each transcribed answer as an embedding and grouping the closest ones, the grader validates a group instead of grading each paper separately." },
-                    { q: "Why RAG for the comments?", a: "Teaching feedback should refer to the course, not to a model's general knowledge. RAG grounds the generation in the course material." }
+                    { q: "Why fuzzy search on top of embeddings?", a: "Transcriptions contain errors: a single misread letter is enough to make two identical answers look different. Fuzzy search tolerates these gaps. It runs in both directions so that a short answer contained in a longer one is not missed. The grader stays in control: they see the suggested answers and choose which ones get the grade." },
+                    { q: "Why RAG for the comments?", a: "Teaching feedback should refer to the course, not to a model's general knowledge. The material is chunked and indexed in Elasticsearch, and the passages closest to the answer are given to the model to ground the generation." },
+                    { q: "Why store the transcriptions?", a: "Transcription takes several seconds per paper. Stored on the server, it is used for display during grading, for grouping answers and for generating comments, without running the model again each time." }
                 ],
                 challenges: [
-                    "Very different handwriting styles.",
-                    "Tight compute constraints on the client side: choosing between powerful but heavy models and lighter solutions."
+                    "Very different handwriting and imperfect transcriptions, hence an error-tolerant similarity search.",
+                    "Client-side compute: finding a model reliable enough yet light enough for the grader's browser.",
+                    "Fitting into a large existing codebase (JHipster, Angular, Quarkus), as a team and in sprints."
                 ],
-                results: "A working version integrated into the platform and tested in real conditions.",
+                results: "A working version integrated into the platform and tested in real conditions: handwritten answers are transcribed automatically, the grader can grade a group of similar answers at once and gets comment suggestions grounded in the course.",
                 learnings: [
+                    "Choosing where to run a model, client or server, based on the existing architecture.",
                     "Evaluating a solution in its real context, not only on a test set.",
                     "Working as a team on an existing codebase, in sprints."
                 ]
@@ -1554,8 +1570,8 @@ window.CONTENT = {
                 { label: "FastAPI", logo: "fastapi" }
             ],
             items: {
-                fr: ["Java / Spring Boot", "C / C++", "HTML / CSS", "Angular", "Unity", "Langium"],
-                en: ["Java / Spring Boot", "C / C++", "HTML / CSS", "Angular", "Unity", "Langium"]
+                fr: ["Java (Spring Boot, Quarkus)", "C / C++", "HTML / CSS", "Angular", "Unity", "Langium"],
+                en: ["Java (Spring Boot, Quarkus)", "C / C++", "HTML / CSS", "Angular", "Unity", "Langium"]
             }
         },
         {
@@ -1616,6 +1632,11 @@ window.CONTENT = {
         { fr: { name: "Allemand", level: "B2 (Goethe-Zertifikat)" }, en: { name: "German", level: "B2 (Goethe-Zertifikat)" } }
     ],
 
+    /*
+      Loisirs : la section « En dehors du code » ne s'affiche que si cette liste n'est pas vide.
+      Exemple :
+      { fr: { name: "Vidéo", text: "..." }, en: { name: "Video", text: "..." } }
+    */
     hobbies: [
         {
             fr: { name: "Enseignement / tutorat", text: "Accompagnement scolaire individuel en mathématiques, auprès d'élèves de collège et de lycée." },

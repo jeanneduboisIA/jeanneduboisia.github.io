@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const siteDir = path.resolve(here, "..");
-const candidates = ["backend", "portfolio_chatbot_backend"].map((d) => path.join(siteDir, "..", d));
+const candidates = ["portfolio-backend"].map((d) => path.join(siteDir, "..", d));
 const backendDir = candidates.find((d) => fs.existsSync(d)) || candidates[0];
 const outFile = path.resolve(process.argv[2] || path.join(backendDir, "data", "portfolio.json"));
 
