@@ -724,7 +724,7 @@ window.CONTENT = {
             pro: true,
             cover: "chat",
             image: "static/img/projets/lina-client/recherche.png",
-            link: "https://novy.groupe-api.fr",
+            link: "https://novy.lina.bzh",
             logos: ["python", "fastapi", "huggingface"],
             stack: ["Python", "FastAPI", "Recherche sémantique", "Déploiement web"],
             fr: {
